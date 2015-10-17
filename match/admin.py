@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Customer, Chef
+
+class CustomerAdmin(admin.ModelAdmin):
+   model = Customer 
+
+class ChefAdmin(admin.ModelAdmin):
+   model = Chef
