@@ -5,7 +5,7 @@ class Customer(models.Model):
     user = models.OneToOneField(User)
     city = models.TextField()
     def __str__(self):
-        return "User ID: %s; City: %s", self.user.username, self.city
+        return "User ID: %s" % self.user
 
 class Chef(models.Model):
     user = models.OneToOneField(User)
@@ -13,5 +13,4 @@ class Chef(models.Model):
     city = models.TextField()
     post_code = models.TextField()
     def __str__(self):
-        return "User ID: %s; Address: %s; City: %s, post_code: %s", self.user.username, self.address, self.city, \
-                self.post_code
+        return "User ID: %s" % self.user
